@@ -12,6 +12,7 @@ namespace Cash_Contractor.Controllers
         public ActionResult AddClaim()
         {
             return View();
+            //test
         }
     }
 }
