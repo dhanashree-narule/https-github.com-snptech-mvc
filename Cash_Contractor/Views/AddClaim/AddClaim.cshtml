@@ -1,0 +1,387 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "AddClaim";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V10</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/assets/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/css/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body class="hero-anime">
+    <div class="header">
+        <!-- <div class="row"> -->
+        <!-- <div class="col-6 col-md-4 col-lg-3 logo"> -->
+        <!-- <img src="images/logo.jpg" alt="Ahmed Pro Partner" /> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <div class="navigation-wrap start-header start-style">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-md">
+
+                        <a class="navbar-brand" href="#" target="_blank"><img src="~/assets/images/logo.jpg" alt="Ahmed Pro Partner" /></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Agency</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Journal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form_container container">
+        <form class="claim100-form validate-form flex-sb flex-w">
+            <div class="row claim100-form">
+                <div class="form-group col-12 col-md-6">
+                    <fieldset class="the-fieldset">
+                        <legend class="the-legend">Pro Partner information</legend>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Please select Type">
+                            <select class="custom-select input100" id="gender2">
+                                <option selected>Select Type *</option>
+                                <option value="1">Type 1</option>
+                                <option value="2">Type 2</option>
+                            </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Company name is required">
+                            <input type="text" class="input100" value="" name="fname" placeholder="Company Name" />
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Order Date is required">
+                            <input class="input100 datepicker" name="orderdata[1][date]" placeholder="Order Date" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Intallation Date is required">
+                            <input class="input100 datepicker datepicker_l_15" name="installationdata[1][date]" placeholder="Installation Date" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Payment Date is required">
+                            <input class="input100 datepicker datepicker_l_15" name="paymentdata[1][date]" placeholder="Payment Date" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Input Date is required">
+                            <input class="input100 datepicker datepicker_l_15" name="inputdata[1][date]" placeholder="Input Date" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Pro Partner Ref No. is required">
+                            <input type="text" class="input100" value="" name="fname" placeholder="Pro Partner Ref No." />
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Please Select Type of Claim">
+                            <select class="custom-select input100" id="gender2">
+                                <option selected>Select Type of Claim*</option>
+                                <option value="1">Cooling</option>
+                                <option value="2">Type 2</option>
+                            </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <fieldset class="the-fieldset">
+                        <legend class="the-legend">Project Owner information</legend>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="First name is required">
+                            <input type="text" class="input100" value="" name="fname" placeholder="First Name *" />
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Last name is required">
+                            <input type="text" class="input100" value="" name="fname" placeholder="Last Name*" />
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Address 1 is required">
+                            <input class="input100" name="Address1" placeholder="Address 1*" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16">
+                            <input class="input100" name="Address2" placeholder="Address 2" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="City is required">
+                            <input class="input100" name="City" placeholder="City*" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Input Date is required">
+                            <input class="input100" name="Country" placeholder="Country*" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Phone is required">
+                            <input type="number" class="input100" value="" name="Phone" placeholder="Phone*" required="required" />
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="input-group wrap-input100 validate-input m-b-16" data-validate="Email is required">
+                            <input class="input100" name="email" placeholder="Email*" required="required" type="text" value="">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group col-12 col-md-12 text-center">
+                    <button type="clear" class="btn btn-dark">Clear Data</button>
+                </div>
+                <div class="form-group col-12 col-md-12 info-tbl">
+                    <fieldset class="the-fieldset">
+                        <legend class="the-legend">List of Unit added for Claim</legend>
+                        <!-- Editable table -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="table" class="table-editable">
+                                    <span class="table-add float-right mb-3 mr-2"><a href="#!" class="btn btn-dark-green"><i class="fa fa-plus" aria-hidden="true"></i> Add Row</a></span>
+                                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Ctegory</th>
+                                                <th class="text-center">Model</th>
+                                                <th class="text-center">Indoor Unit Serial No.</th>
+                                                <th class="text-center">Outdoor Unit Serial No.</th>
+                                                <th class="text-center">Ca$h Back<br />Rebate SAR</th>
+                                                <th class="text-center">No of Unit</th>
+                                                <th class="text-center">Total Ca$h Back<br />Rebate SAR</th>
+                                                <th class="text-center">List Price SAR</th>
+                                                <th class="text-center">Multiplier</th>
+                                                <th class="text-center">Sales Price of<br />unit SAR</th>
+                                                <th class="text-center">Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
+                                                <td class="pt-3-half" contenteditable="true">30</td>
+                                                <td class="pt-3-half" contenteditable="true">Deepends</td>
+                                                <td class="pt-3-half" contenteditable="true">Spain</td>
+                                                <td class="pt-3-half" contenteditable="true">Madrid</td>
+                                                <td class="pt-3-half" contenteditable="true">dshvbd</td>
+                                                <td class="pt-3-half" contenteditable="true">Deepends</td>
+                                                <td class="pt-3-half" contenteditable="true">Spain</td>
+                                                <td class="pt-3-half" contenteditable="true">Madrid</td>
+                                                <td class="pt-3-half" contenteditable="true">dshvbd</td>
+                                                <td>
+                                                    <span class="table-remove">
+                                                        <button type="button"
+                                                                class="btn btn-danger btn-rounded btn-sm my-0">
+                                                            Remove
+                                                        </button>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Editable table -->
+                    </fieldset>
+                </div>
+                <div class="form-group col-12 col-md-12 text-center btn_group">
+                    <button type="button" class="btn btn-deep-orange"><img src="~/assets/images/home.png" alt="Ahmed Pro Partner" />Return to Home</button>
+                    <button type="button" class="btn btn-cyan"><img src="~/assets/images/reset.png" alt="Ahmed Pro Partner" />Reset Screen</button>
+                    <button type="button" class="btn btn-mdb-color"><img src="~/assets/images/attachment.png" alt="Ahmed Pro Partner" />Attached Document</button>
+                    <button type="button" class="btn btn-dark-green"><img src="~/assets/images/save.png" alt="Ahmed Pro Partner" />Save Claim</button>
+                    <button type="button" class="btn btn-indigo"><img src="~/assets/images/mail.png" alt="Ahmed Pro Partner" />Save & Email Claim</button>
+                    <button type="button" class="btn btn-yellow"><img src="~/assets/images/report.png" alt="Ahmed Pro Partner" />View Report</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/js/jquery.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/js/popper.min.js"></script>
+    <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.14.1/js/mdb.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/assets/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Scripts/main.js"></script>
+    <script>
+const $tableID = $('#table');
+ const $BTN = $('#export-btn');
+ const $EXPORT = $('#export');
+
+ const newTr = `
+<tr class="hide">
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half" contenteditable="true">Example</td>
+  <td class="pt-3-half">
+    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
+    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+  </td>
+  <td>
+    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
+  </td>
+</tr>`;
+
+ $('.table-add').on('click', 'i', () => {
+
+   const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+
+   if ($tableID.find('tbody tr').length === 0) {
+
+     $('tbody').append(newTr);
+   }
+
+   $tableID.find('table').append($clone);
+ });
+
+ $tableID.on('click', '.table-remove', function () {
+
+   $(this).parents('tr').detach();
+ });
+
+ $tableID.on('click', '.table-up', function () {
+
+   const $row = $(this).parents('tr');
+
+   if ($row.index() === 0) {
+     return;
+   }
+
+   $row.prev().before($row.get(0));
+ });
+
+ $tableID.on('click', '.table-down', function () {
+
+   const $row = $(this).parents('tr');
+   $row.next().after($row.get(0));
+ });
+
+ // A few jQuery helpers for exporting only
+ jQuery.fn.pop = [].pop;
+ jQuery.fn.shift = [].shift;
+
+ $BTN.on('click', () => {
+
+   const $rows = $tableID.find('tr:not(:hidden)');
+   const headers = [];
+   const data = [];
+
+   // Get the headers (add special header logic here)
+   $($rows.shift()).find('th:not(:empty)').each(function () {
+
+     headers.push($(this).text().toLowerCase());
+   });
+
+   // Turn all existing rows into a loopable array
+   $rows.each(function () {
+     const $td = $(this).find('td');
+     const h = {};
+
+     // Use the headers from earlier to name our hash keys
+     headers.forEach((header, i) => {
+
+       h[header] = $td.eq(i).text();
+     });
+
+     data.push(h);
+   });
+
+   // Output the result
+   $EXPORT.text(JSON.stringify(data));
+ });
+ (function($) { "use strict";
+
+	$(function() {
+		var header = $(".start-style");
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 10) {
+				header.removeClass('start-style').addClass("scroll-on");
+			} else {
+				header.removeClass("scroll-on").addClass('start-style');
+			}
+		});
+	});
+
+	//Animation
+
+	$(document).ready(function() {
+		$('body.hero-anime').removeClass('hero-anime');
+	});
+
+	//Menu On Hover
+
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+			if ($(window).width() > 750) {
+				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+				setTimeout(function(){
+				_d[_d.is(':hover')?'addClass':'removeClass']('show');
+				},1);
+			}
+	});
+
+
+  })(jQuery);
+    </script>
+</body>
+</html>
+

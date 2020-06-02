@@ -1,0 +1,131 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "AddUser";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V10</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/assets/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <div class="header">
+        <div class="row">
+            <div class="col-12 col-md-4 logo">
+                <img src="~/assets/images/logo.jpg" alt="Ahmed Pro Partner" />
+            </div>
+            <div class="col-12 col-md-6 text-right align-self-center ml-auto">
+                <a href="@Url.Action("AddUser", "AddUser")"  class="btn btn-dark menu-btn"><i class="fa fa-user-o" aria-hidden="true"></i> Create User Login</span></a>
+                <a href="@Url.Action("AddClaim", "AddClaim")" class="btn btn-dark menu-btn"><i class="fa fa-folder-open-o" aria-hidden="true"></i> Open/View Claims</span></a>
+                <a href="@Url.Action("AddClaim", "AddClaim")" class="btn btn-dark menu-btn"><i class="fa fa-file-text-o" aria-hidden="true"></i> New Claim Entry</span></a>
+                <a href="@Url.Action("LogIn", "Loging")" class="btn btn-danger exit-btn">Exit <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="inner_screen">
+        <div class="page_heading">Create User Login</div>
+        <div class="add_user_wrap">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-5 col-lg-4 added_loin_area">
+                    <select class="custom-select" multiple>
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-7 col-lg-8 create_loin_area">
+                    <div class="wrap-login100 p-t-50 p-b-90">
+                        <form class="login100-form validate-form flex-sb flex-w">
+
+                            <label class="input_label" for="createUsername">Username</label>
+                            <div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
+                                <input class="input100" type="text" name="username" placeholder="Username" id="createUsername">
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <label class="input_label" for="createPass">Password</label>
+                            <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                                <input class="input100" type="password" name="pass" placeholder="Password" id="createPass">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="admin">
+                                <label class="form-check-label" for="admin">Administrator</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="user">
+                                <label class="form-check-label" for="user">User</label>
+                            </div>
+
+                            <div class="container-login100-form-btn m-t-17">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Add
+                                </button>
+                                <button class="btn btn-success">
+                                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                                </button>
+                                <button class="btn btn-dark">
+                                    Exit <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Scripts/main.js"></script>
+
+</body>
+</html>
+
